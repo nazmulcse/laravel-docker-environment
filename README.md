@@ -35,11 +35,11 @@ Add custom php ini configuration to this file `.docker/php_custom.ini`
 
 ## Source
 
-```
+
 [https://www.digitalocean.com/community/tutorials/how-to-set-up-laravel-nginx-and-mysql-with-docker-compose](https://www.digitalocean.com/community/tutorials/how-to-set-up-laravel-nginx-and-mysql-with-docker-compose)
 [https://www.appzcoder.com/dockerize-php-application/](https://www.appzcoder.com/dockerize-php-application/)
 [https://dev.to/aschmelyun/crafting-a-better-local-laravel-dev-environment-with-docker-45cj](https://dev.to/aschmelyun/crafting-a-better-local-laravel-dev-environment-with-docker-45cj)
 [Best practices for writing Dockerfiles](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
 [Compose file version 3 reference](https://docs.docker.com/compose/compose-file/)
-```
+
 
