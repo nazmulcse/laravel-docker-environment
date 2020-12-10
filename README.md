@@ -1,5 +1,5 @@
 # laravel-docker-environment
-A pretty simplified Docker Compose workflow that sets up a LEMP network of containers for local Laravel development.
+A pretty simplified Docker Compose workflow that sets up a LAMP network of containers for local Laravel development.
 
 
 ## Usage
