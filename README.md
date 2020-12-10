@@ -29,8 +29,8 @@ Add custom php ini configuration to this file `.docker/php_custom.ini`
 
 ```
 .docker		# Contain docker file. Such as php-apache image, Virtual host file and php custom ini file
-.db			# Database folder. 
-.docker-compose.yml		# docker compose file
+db			# Database folder. 
+docker-compose.yml		# docker compose file
 ```
 
 ## Source
