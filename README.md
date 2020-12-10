@@ -46,4 +46,6 @@ Add custom php ini configuration to this file `.docker/php_custom.ini`
 
 [Compose file version 3 reference](https://docs.docker.com/compose/compose-file/)
 
+[Top 20 Docker Security Tips](https://towardsdatascience.com/top-20-docker-security-tips-81c41dd06f57)
+
 
