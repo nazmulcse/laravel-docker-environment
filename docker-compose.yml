@@ -1,0 +1,55 @@
+version: '3.7'
+networks:
+  laravel_jetstream_vue:
+services:
+  app:
+    build:
+      context: .
+      dockerfile: .docker/php-apache.dockerfile
+    image: 'laravelapp-jetstream-docker'
+    container_name: laravel_vue_app
+    ports:
+      - 8080:80
+    volumes:
+      - ./:/var/www/html
+    networks:
+    - laravel_jetstream_vue
+  db:
+    image: mysql:5.7
+    container_name: mysql
+    restart: always
+    networks:
+     - laravel_jetstream_vue
+    ports:
+      - "3306:3306"
+     # - "${DB_PORT}:3306"  Geting port from .env file
+    environment:
+      #MYSQL_DATABASE: ${DB_DATABASE}
+      MYSQL_DATABASE: 'laraapp_docker_db'
+      MYSQL_ALLOW_EMPTY_PASSWORD: 0
+     # MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ""
+    volumes:
+        - ./db:/var/lib/mysql
+
+  phpmyadmin:
+    image: phpmyadmin
+    depends_on:
+      - db
+    restart: always
+    networks:
+     - laravel_jetstream_vue
+    ports:
+      - 8183:80
+    environment:
+      - PMA_HOST=db
+      - UPLOAD_LIMIT=1G
+
+  redis:
+    image: redis
+    restart: always
+    ports:
+      - "6379:6379"
+    command: redis-server --requirepass 222222
+    networks:
+      - laravel_jetstream_vue
